@@ -1,0 +1,35 @@
+{
+  "name": "notes-app",
+  "private":true,
+  "version": "1.0.0",
+  "description": "",
+  "workspaces":[
+    "Fronted",
+    "Backend"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build":"npm run build --wokspace=Fronted",
+    "start":"npm run start --workspace=Backend",
+    "dev:api":"npm run build && npm run dev --workspace=Backend"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json",
+    "env": {
+      "jest": true,
+      "cypress/globals":true
+    },
+    "plugins": [
+      "cypress"
+    ]
+  },
+  "devDependencies": {
+    "eslint-plugin-cypress": "^2.12.1",
+    "standard": "16.0.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+  
+
+}

@@ -1,0 +1,20 @@
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8xIiwiaWQiOiI2MTkwNDI5MjM2YTRmYmQwMmYxODU1NGQiLCJpYXQiOjE2MzY5MzkyOTB9.DeNnFOEoro1RRc7_0SDJyHb6fFZWrFxt66gdvq6K1IQ
+//para que el servidor sepa que content-type le estamos enviando,ojo siempre hay que ponerlo debajo del post
+
+//aca se envia un objeto json,respetar los espacios
+{
+"content": "nueva nota con id para el usuario2",
+"important": true
+}
+###
+//se crea tres ### si quieres poner otro post debajo para probar
+# POST http://localhost:3000/api
+# Content-Type: application/json
+
+# {
+
+# }
+//web token . ahora cuando quieres postear una nota este debe tener una autorization, que es el bearer token,borrar el userid ya que en el token,su payload ahi viene el id del user del que has logeado
+// ir a index

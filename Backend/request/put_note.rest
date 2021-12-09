@@ -1,0 +1,9 @@
+PUT http://localhost:3001/api/6164ca00cf5e741d17413c37
+Content-Type: application/json
+//para que el servidor sepa que content-type le estamos enviando,ojo siempre hay que ponerlo debajo del post
+
+//aca se envia un objeto json
+{
+"content":"nueva nota con put 2",
+"important":true
+}
