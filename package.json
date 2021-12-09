@@ -7,9 +7,12 @@
     "Fronted",
     "Backend"
   ],
+  "engines":{
+    "npm":"7.9.0"
+  },
   "main": "index.js",
   "scripts": {
-    "build":"npm run build --wokspace=Fronted",
+    "build":"SKIP_PREFLIGHT_CHECK=true npm run build --wokspace=Fronted",
     "start":"npm run start --workspace=Backend",
     "dev:api":"npm run build && npm run dev --workspace=Backend"
   },
