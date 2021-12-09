@@ -12,11 +12,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "build":"SKIP_PREFLIGHT_CHECK=true npm run build --wokspace=Fronted",
+    "build":"SKIP_PREFLIGHT_CHECK=true npm run build --workspace=Fronted",
     "start":"npm run start --workspace=Backend",
-    "dev:api":"npm run build && npm run dev --workspace=Backend"
+    "dev:api":"npm run build && npm run dev --workspace=Backend",
+    "lint":"eslint ./Fronted ./Backend"
   },
   "eslintConfig": {
+    "ignorePatterns": "build",
     "extends": "./node_modules/standard/eslintrc.json",
     "env": {
       "jest": true,
