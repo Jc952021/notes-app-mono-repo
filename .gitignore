@@ -1,2 +1,4 @@
 node_modules
 .env
+en el pkjson-se debe crear otro sript para iniciar el fronted-habia error ya que no tenia un cross-env al comienzo
+crear un archivo notes.js -pasar ahi todoo lo de app -ir a app de fronted,

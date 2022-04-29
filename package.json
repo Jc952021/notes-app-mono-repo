@@ -1,28 +1,29 @@
 {
   "name": "notes-app",
-  "private":true,
+  "private": true,
   "version": "1.0.0",
   "description": "",
-  "workspaces":[
+  "workspaces": [
     "Fronted",
     "Backend"
   ],
-  "engines":{
-    "npm":"7.9.0"
+  "engines": {
+    "npm": "7.9.0"
   },
   "main": "index.js",
   "scripts": {
-    "build":"SKIP_PREFLIGHT_CHECK=true npm run build --workspace=Fronted",
-    "start":"npm run start --workspace=Backend",
-    "dev:api":"npm run build && npm run dev --workspace=Backend",
-    "lint":"eslint ./Fronted ./Backend"
+    "build": "cross-env SKIP_PREFLIGHT_CHECK=true npm run build --workspace=Fronted",
+    "start": "npm run start --workspace=Backend",
+    "dev:api": "cross-env npm run build && npm run dev --workspace=Backend",
+    "dev:app": "cross-env SKIP_PREFLIGHT_CHECK=true npm run start --workspace=Fronted",
+    "lint": "eslint ./Fronted ./Backend"
   },
   "eslintConfig": {
     "ignorePatterns": "build",
     "extends": "./node_modules/standard/eslintrc.json",
     "env": {
       "jest": true,
-      "cypress/globals":true
+      "cypress/globals": true
     },
     "plugins": [
       "cypress"
@@ -35,6 +36,4 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
-  
-
 }

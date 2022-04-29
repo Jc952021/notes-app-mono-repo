@@ -1,8 +1,8 @@
 
 const es = {
   TOGLABLE: {
-    CANCEL__BUTTON: "Cancel",
-  },
-};
+    CANCEL__BUTTON: 'Cancelar'
+  }
+}
 
-export default es;
+export default es
